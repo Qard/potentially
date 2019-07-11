@@ -1,0 +1,34 @@
+{
+  "name": "potentially",
+  "version": "1.0.0",
+  "description": "Option/maybe type with separate derived types to reduce branching",
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/Qard/potentially#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qard/potentially.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qard/potentially/issues"
+  },
+  "keywords": [
+    "maybe",
+    "option",
+    "fp"
+  ],
+  "scripts": {
+    "precoverage": "npm run test",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "precoverage:html": "npm run test",
+    "coverage:html": "nyc report --reporter=html && open coverage/index.html",
+    "test": "standard && nyc tap test.js"
+  },
+  "devDependencies": {
+    "codecov": "^3.5.0",
+    "nyc": "^14.1.1",
+    "standard": "^12.0.1",
+    "tap": "^14.4.1"
+  }
+}
